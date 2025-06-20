@@ -1,3 +1,29 @@
+// glitch effect
+document.getElementById('cv-request').addEventListener('mouseenter', function() {
+    const originalText = this.textContent;
+    const glitchChars = "!@#$%^&*()_+{}|:<>?~`";
+    
+    let counter = 0;
+    const glitchInterval = setInterval(() => {
+        if (counter >= 10) {
+            this.textContent = originalText;
+            clearInterval(glitchInterval);
+            return;
+        }
+        
+        let glitchedText = '';
+        for (let i = 0; i < originalText.length; i++) {
+            if (Math.random() > 0.7) {
+                glitchedText += glitchChars.charAt(Math.floor(Math.random() * glitchChars.length));
+            } else {
+                glitchedText += originalText.charAt(i);
+            }
+        }
+        this.textContent = glitchedText;
+        counter++;
+    }, 50);
+});
+
 // Matrix rain effect
 const canvas = document.getElementById('matrix-rain');
 const ctx = canvas.getContext('2d');
@@ -122,30 +148,4 @@ document.getElementById('current-date').textContent = currentDate.toLocaleDateSt
 window.addEventListener('resize', function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-});
-
-document.getElementById('cv-request').addEventListener('mouseenter', function() {
-    // Create a glitch effect on hover
-    const originalText = this.textContent;
-    const glitchChars = "!@#$%^&*()_+{}|:\"<>?~`";
-    
-    let counter = 0;
-    const glitchInterval = setInterval(() => {
-        if (counter >= 10) {
-            this.textContent = originalText;
-            clearInterval(glitchInterval);
-            return;
-        }
-        
-        let glitchedText = '';
-        for (let i = 0; i < originalText.length; i++) {
-            if (Math.random() > 0.7) {
-                glitchedText += glitchChars.charAt(Math.floor(Math.random() * glitchChars.length));
-            } else {
-                glitchedText += originalText.charAt(i);
-            }
-        }
-        this.textContent = glitchedText;
-        counter++;
-    }, 50);
 });
