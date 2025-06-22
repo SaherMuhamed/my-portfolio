@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saher Muhamed | Certifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00ff00;
+            --secondary: #00aa00;
+            --dark: #111111;
+            --darker: #080808;
+            --light: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: rgba(8, 8, 8, 0.95);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            padding: 20px 0;
+            position: relative;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Certifications Grid */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .cert-card {
+            background-color: var(--darker);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cert-card:nth-child(2n) {
+            animation-delay: 0.5s;
+        }
+
+        .cert-card:nth-child(3n) {
+            animation-delay: 1s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+        }
+
+        .cert-img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+
+        .cert-title {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cert-date {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .cert-desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Terminal-like header */
+        .terminal-bar {
+            background-color: var(--darker);
+            padding: 8px 15px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .terminal-btn.red {
+            background-color: #ff5f56;
+        }
+
+        .terminal-btn.yellow {
+            background-color: #ffbd2e;
+        }
+
+        .terminal-btn.green {
+            background-color: #27c93f;
+        }
+
+        .terminal-title {
+            margin-left: 15px;
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-card {
+                animation: float-mobile 6s ease-in-out infinite;
+            }
+            
+            @keyframes float-mobile {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-5px); }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Resume</span>
+            </a>
+            <div class="nav-links">
+                <a href="#security" class="nav-link">Security</a>
+                <a href="#programming" class="nav-link">Programming</a>
+                <a href="#other" class="nav-link">Other</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Terminal-style header -->
+        <div class="terminal-bar">
+            <div class="terminal-btn red"></div>
+            <div class="terminal-btn yellow"></div>
+            <div class="terminal-btn green"></div>
+            <div class="terminal-title">certifications.exe --list --details</div>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div class="certifications">
+            <div class="cert-card" id="security">
+                <img src="../assets/images/certs/learn-ethical-hacking-from-scratch-udemy.png" alt="Ethical Hacking Certification" class="cert-img">
+                <h3 class="cert-title">Learn Ethical Hacking From Scratch (Udemy)</h3>
+                <span class="cert-date">Issued: 01-11-2021 | Lenght: 16 hours | No Expiration</span>
+                <p class="cert-desc">Demonstrated knowledge of ethical hacking phases, attack vectors, and preventative countermeasures.</p>
+            </div>
+
+            <!-- Programming Certifications -->
+            <div class="cert-card" id="programming">
+                <img src="../assets/images/certs/network-hacking-continued.png" alt="Network Hacking Certification" class="cert-img">
+                <h3 class="cert-title">Network Hacking Continued - Intermediate to Advanced (Udemy)</h3>
+                <span class="cert-date">Issued: 01/08/2022 | Lenght: 10 hours | No Expiration</span>
+                <!-- <p class="cert-desc">Validated expertise in Python programming, including OOP, scripting, and security tools development.</p> -->
+            </div>
+
+            <!-- Other Certifications -->
+            <div class="cert-card" id="other">
+                <img src="./assets/certs/linux-cert.jpg" alt="Linux Certification" class="cert-img">
+                <h3 class="cert-title">Red Hat Certified System Administrator</h3>
+                <span class="cert-date">Issued: January 2024 | Expires: January 2027</span>
+                <p class="cert-desc">Proven ability to configure, manage, and secure Linux systems in enterprise environments.</p>
+            </div>
+
+            <!-- Add more certifications as needed -->
+            <div class="cert-card">
+                <img src="./assets/certs/network-cert.jpg" alt="Network Certification" class="cert-img">
+                <h3 class="cert-title">Cisco Certified Network Associate</h3>
+                <span class="cert-date">Issued: November 2023 | Expires: November 2026</span>
+                <p class="cert-desc">Demonstrated skills in network fundamentals, IP services, security fundamentals, and automation.</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="./assets/certs/websec-cert.jpg" alt="Web Security Certification" class="cert-img">
+                <h3 class="cert-title">Web Application Security Certification</h3>
+                <span class="cert-date">Issued: August 2023 | No Expiration</span>
+                <p class="cert-desc">Validated expertise in web application security, OWASP Top 10 vulnerabilities, and secure coding practices.</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="./assets/certs/cloud-cert.jpg" alt="Cloud Certification" class="cert-img">
+                <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+                <span class="cert-date">Issued: June 2023 | Expires: June 2026</span>
+                <p class="cert-desc">Demonstrated understanding of AWS Cloud concepts, services, security, and architecture.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced floating animation with randomization
+        document.querySelectorAll('.cert-card').forEach((card, index) => {
+            // Randomize animation duration and delay slightly
+            const duration = 5 + Math.random() * 3;
+            const delay = index * 0.3;
+            card.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+            
+            // Add slight tilt on hover
+            card.addEventListener('mouseenter', () => {
+                const tiltX = (Math.random() * 10) - 5;
+                const tiltY = (Math.random() * 10) - 5;
+                card.style.transform = `translateY(-5px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saher Muhamed | Online Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Matrix rain background -->
+    <canvas id="matrix-rain" class="matrix-rain"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-terminal"></i></span>
+                <span class="logo-text">Saher Muhamed</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-project-diagram"></i></span>
+                        <span class="nav-text">Projects</span>
+                        <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Offensive Security</span>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span>CTF Writeups</span>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-book"></i>
+                            <span>Study Notes</span>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-python"></i>
+                            <span>Red Teaming Tools (Python)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-user-secret"></i></span>
+                        <span class="nav-text">About Me</span>
+                        <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#overview">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Overview</span>
+                        </a>
+                        <a href="#education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </a>
+                        <a href="#experience">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                        <a href="#skills" class="nav-link">
+                            <i class="fas fa-code"></i>
+                            <span>Skills</span>
+                        </a>
+                        <!-- <a href="./public/certifications.html" class="nav-link">
+                            <i class="fa fa-certificate"></i>
+                            <span>Certifications</span>
+                        </a> -->
+                        <a href="./public/my-resume.html" class="nav-link">
+                            <i class="fa fa-download"></i>
+                            <span>Download My C.V</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <img src="./assets/images/personal-photo.jpg" alt="Saher's Personal Photo" class="profile-img">
+            <h1>Saher Muhamed<span class="cursor">_</span></h1>
+            <div class="typing-container">
+                <div class="typing-text" id="typing-text"></div>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <div class="terminal-bar">
+            <div class="terminal-btn red"></div>
+            <div class="terminal-btn yellow"></div>
+            <div class="terminal-btn green"></div>
+            <div class="terminal-title">overview.exe</div>
+        </div>
+
+        <div class="terminal-body">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>Experienced penetration tester, ethical hacker, and fully-fledged python developer. Skilled in
+                    finding security problems in networks, systems, and applications. Always learning about new
+                    threats to keep organizations safe. Good at explaining security issues and giving helpful advice
+                    to clients and teams.</p>
+            </section>
+
+            <hr />
+
+            <section id="education">
+                <h2>Education</h2>
+                <h4>Bachelor's degree in information technology - GPA: 3.09 / 4 07/2023</h4>
+                <p>Faculty Of Computers and Informatics, Zagazig University</p>
+                <p><b>Graduation Project (Team Leader) A+:</b> "Intelligence Tracking and Monitoring System for
+                    Kids" to enhance child safety through real-time tracking and monitoring. The system
+                    integrates IoT hardware, a mobile app, and a central python-based server to prevent crime
+                    and ease parental concerns.</p>
+            </section>
+
+            <hr />
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <h4>Penetration testing and ethical hacking (Internship) 02/2025 - 05/2025</h4>
+                <p>National Telecommunication Institute (NTI) Smart Village, Egypt</p>
+            </section>
+
+            <hr />
+
+            <section id="skills">
+                <h2>Summary</h2>
+                <ul>
+                    <li>Familiar with core cryptographic concepts such as encryption, and hashing</li>
+                    <li>Good Knowledge in both Linux and Windows environments</li>
+                    <li>Excellent scripting and debugging skills on Java, python, and bash scripting</li>
+                    <li>Familiar with virtualization products such as VMware, Oracle VirtualBox and Hyper-V</li>
+                    <li>Have a solid understanding of network protocols such as ARP, ICMP, FTP, Telnet, and SSH</li>
+                    <li>Ability to handle multiple tasks and work independently as well as in a team</li>
+                </ul>
+
+                <hr />
+
+                <h2>Responsibilities</h2>
+                <ul>
+                    <li>Perform wireless network assessments, capturing WPA/WPA2 handshakes, detecting
+                        rogue APs, and conducting Evil Twin attacks using various tools</li>
+                    <li>Execute network penetration tests on internal and external infrastructures, identifying
+                        misconfigurations and exploitable services using tools such as Nmap, and Metasploit</li>
+                    <li>Perform mobile application security assessments (Android / iOS) using various tools such
+                        as <code>MobSF</code>, <code>Frida</code>, <code>Objection</code>, and <code>APKTool</code></li>
+                    <li>Conduct web application penetration testing to identify OWASP Top 10 vulnerabilities such
+                        as <b>broken access control</b>, <b>SQLi</b>, <b>XSS</b>, and <b>path traversal</b> using
+                        <code>burp suite</code></li>
+                </ul>
+
+                <hr />
+
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Network design, IP addressing (IPv4/IPv6), routing, NAT</li>
+                    <li>Red Hat Enterprise Linux 1 and 2</li>
+                    <li>Windows administration: Active Directory, Group Policy</li>
+                    <li>Packet analysis using wireshark for protocol dissection, and network troubleshooting</li>
+                    <li>Cybersecurity fundamentals: risk analysis, threat actor, encryption, secure protocols</li>
+                    <li>Penetration testing: network, web, and mobile platforms</li>
+                    <li>Write ethical hacking tools with python</li>
+                </ul>
+
+                <hr />
+
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Effective verbal and non-verbal communication skills</li>
+                    <li>Skilled in team building, collaboration, and conflict resolution</li>
+                    <li>Excellent time management and task prioritization</li>
+                    <li>Strong understanding of professional ethics and workplace behaviour</li>
+                    <li>Advanced problem-solving, critical thinking, and decision-making</li>
+                    <li>Crafting professional emails</li>
+                </ul>
+
+                <hr />
+
+                <h2>Awards</h2>
+                <a href="https://drive.google.com/file/d/19FtekrgH0zrkg8oU33xQzjK2R039VN1I/view?usp=drive_link">
+                    <h4>Honored by the Director of the Armed Forces Medical Services Department &#128279;</h4>
+                </a>
+                <h5>Armed Forces Medical Services Administration</h5>
+
+                <hr />
+
+                <h2>Languages</h2>
+                <ul>
+                    <li>Arabic <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span></li>
+                    <li>English <span class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span></li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="7" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/SaherMuhamed" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sahermhmed/" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sahermuhamed0@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Saher Muhamed <span class="rating">👨🏽‍💻</span></p>
+        <p>Last updated: June 22, 2025</p>
+        <!-- <p>Last updated: <span id="current-date"></span></p> -->
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
